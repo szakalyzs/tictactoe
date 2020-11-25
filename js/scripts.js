@@ -35,11 +35,38 @@ function initGame() {
     
 })();
 
-function checkWin(i, j) {
-    if (gameStatus[i].every(item => item === 'X')) {
+function checkWin(row, col) {
+    if (gameStatus[row].every(item => item === 'X')) {
         console.log('You win!');
+        return;
     }
-    if (gameStatus[j].every(item => item === 'X')) {
+    let count = 0;
+    for (let i = 0; i < 3; i++) {
+        if (gameStatus[i][col] === 'X') {
+            count++;
+        }    
+    }
+    if (count === 3) {
+        console.log('You win!');
+        return;
+    }
+    count = 0;
+    for (let i = 0; i < 3; i++) {
+        if (gameStatus[i][i] === 'X') {
+            count++;
+        }               
+    }
+    if (count === 3) {
+        console.log('You win!');
+        return;
+    }
+    count = 0;
+    for (let i = 0; i < 3; i++) {
+        if (gameStatus[i][2-i] === 'X') {
+            count++;
+        }               
+    }
+    if (count === 3) {
         console.log('You win!');
     }
 }
