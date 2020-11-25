@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    background-color: rgb(210,210,220); 
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header, .main {
+    text-align: center;
+    padding: 10px;
+}
+
+.main__game {
+ 
+    display: inline-block;
+}
+
+.game__board {
+    background-color: rgb(85,140,190);
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 6px 3px rgba(0,0,0,0.3);
+}
+
+.board__cell {
+    padding: 50px;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: rgb(255,255,255);
+
+}
